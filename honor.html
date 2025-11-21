@@ -6,46 +6,55 @@
     <title>榮譽榜單 | 斗六顧徳補習班</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Microsoft JhengHei', sans-serif; }
+        .bg-brand { background-color: #0056b3; }
+    </style>
 </head>
-<body class="bg-slate-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
     <nav class="bg-white shadow-lg fixed w-full z-20 top-0">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-extrabold text-blue-800">
                 <a href="index.html">斗六顧徳</a>
             </div>
-            <a href="index.html" class="text-blue-600 font-bold hover:text-blue-800">
+            <a href="index.html" class="bg-brand text-white px-4 py-2 rounded hover:opacity-90 transition">
                 <i class="fas fa-arrow-left"></i> 回到首頁
             </a>
         </div>
     </nav>
 
     <div class="pt-24 pb-12 container mx-auto px-6">
-        <div class="text-center mb-12">
-            <span class="text-red-600 font-bold tracking-widest">HALL OF FAME</span>
-            <h1 class="text-4xl font-bold text-gray-800 mt-2">金榜題名 榮譽榜</h1>
-            <div class="w-24 h-1 bg-red-600 mx-auto mt-4"></div>
-            <p class="text-gray-600 mt-4">顧徳學子，出類拔萃。每一份成績，都是努力的證明。</p>
+        <div class="text-center mb-16">
+            <i class="fas fa-crown text-yellow-500 text-6xl mb-4"></i>
+            <h1 class="text-5xl font-extrabold text-red-700 mt-2 tracking-wide">金榜題名 🏆 榮譽榜</h1>
+            <p class="text-xl text-gray-600 mt-4">見證實力，超越自我。顧徳學子，出類拔萃！</p>
         </div>
         
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-3 gap-8">
             
-        <div class="bg-white p-3 rounded-lg shadow-lg border border-gray-200">
-    <img src="good01.png" class="w-full h-auto rounded">
-    <p class="text-center mt-2 font-bold text-gray-700">113年學期成績優異</p>
-</div>
-
-            <div class="bg-white p-3 rounded-lg shadow-lg border border-gray-200">
-                <img src="https://via.placeholder.com/600x800?text=榜單照片預留位置2" class="w-full h-auto rounded">
-                <p class="text-center mt-2 font-bold text-gray-700">校排進步榮譽榜</p>
+            <div class="bg-white p-4 rounded-lg shadow-lg border border-red-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                <img src="good01.png" class="w-full h-auto rounded border-2 border-red-100">
+                <p class="text-center mt-3 font-extrabold text-xl text-red-700">113年學期成績優異</p>
             </div>
 
-            <div class="bg-white p-3 rounded-lg shadow-lg border border-gray-200">
-                <img src="https://via.placeholder.com/600x800?text=榜單照片預留位置3" class="w-full h-auto rounded">
-                <p class="text-center mt-2 font-bold text-gray-700">數學滿分榜</p>
+            <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                <img src="https://via.placeholder.com/600x800?text=校排進步榮譽榜" class="w-full h-auto rounded border-2 border-gray-100">
+                <p class="text-center mt-3 font-extrabold text-xl text-blue-700">校排進步榮譽榜</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                <img src="https://via.placeholder.com/600x800?text=數學滿分榜" class="w-full h-auto rounded border-2 border-gray-100">
+                <p class="text-center mt-3 font-extrabold text-xl text-blue-700">數學滿分榜</p>
             </div>
 
             </div>
+        
+        <div class="text-center mt-16">
+            <a href="index.html" class="inline-block bg-blue-600 text-white font-bold px-8 py-3 rounded-full hover:bg-blue-700 transition">
+                <i class="fas fa-home mr-2"></i> 返回首頁
+            </a>
+        </div>
     </div>
 
     <footer class="bg-gray-900 text-white py-8 text-center">
@@ -53,8 +62,4 @@
     </footer>
 
 </body>
-
 </html>
-
-
-
