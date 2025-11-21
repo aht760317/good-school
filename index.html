@@ -17,9 +17,24 @@
             background-size: cover;
             background-position: center;
         }
+        
+        /* 🔥🔥🔥 新增：右側懸浮倒數標籤的動畫設定 🔥🔥🔥 */
+        .floating-timer {
+            transition: transform 0.3s ease-in-out;
+        }
+        .floating-timer:hover {
+            transform: translateX(-10px); /* 滑鼠移過去會往左凸出來一點 */
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-gray-800">
+<body class="bg-slate-50 text-gray-800 relative">
+
+    <a href="https://douliutimer-gkegcwva.manus.space/" target="_blank" class="floating-timer fixed top-1/3 right-0 z-50 flex items-center bg-red-600 text-white px-4 py-3 rounded-l-xl shadow-2xl cursor-pointer border-y-2 border-l-2 border-white hover:bg-red-700">
+        <div class="flex flex-col items-center">
+            <i class="fas fa-stopwatch text-2xl mb-1 animate-pulse"></i>
+            <span class="writing-vertical font-bold tracking-widest text-sm">段考倒數</span>
+        </div>
+    </a>
 
     <nav class="bg-white shadow-lg fixed w-full z-20 top-0">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -27,7 +42,6 @@
                 <i class="fas fa-shapes mr-2"></i> 斗六顧徳
             </div>
             <div class="hidden md:flex space-x-6 text-gray-700 font-bold text-lg">
-                <a href="#timer" class="text-red-600 hover:text-red-800 transition"><i class="fas fa-clock"></i> 段考倒數</a>
                 <a href="#features" class="hover:text-blue-600 transition">數學強項</a>
                 <a href="#courses" class="hover:text-blue-600 transition">課程介紹</a>
                 <a href="#care" class="text-orange-600 hover:text-orange-800 transition"><i class="fas fa-child"></i> 安親課輔</a>
@@ -58,24 +72,6 @@
             </div>
         </div>
     </header>
-
-    <section id="timer" class="py-16 bg-red-50">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-red-800 mb-4">
-                <i class="fas fa-stopwatch"></i> 把握時間，決戰考場
-            </h2>
-            <p class="text-gray-600 mb-8 text-lg">
-                還在擔心來不及複習嗎？隨時掌握斗六國中小段考剩餘天數。<br>
-                點擊下方按鈕，立即查看最新倒數時間！
-            </p>
-            
-            <a href="https://douliutimer-gkegcwva.manus.space/" target="_blank" class="inline-flex items-center justify-center bg-red-600 text-white text-xl font-bold px-10 py-5 rounded-full shadow-xl hover:bg-red-700 hover:scale-105 transition transform duration-300 border-4 border-white">
-                <i class="fas fa-external-link-alt mr-3"></i> 查看段考倒數計時器
-            </a>
-            
-            <p class="mt-4 text-sm text-gray-500">* 點擊後將開啟新視窗</p>
-        </div>
-    </section>
 
     <section id="features" class="py-20 container mx-auto px-6">
         <div class="text-center mb-16">
@@ -197,7 +193,7 @@
 
                 <div class="relative">
                     <div class="absolute -inset-4 bg-orange-200 rounded-xl transform rotate-2"></div>
-                    <img src="https://cdn.pixabay.com/photo/2023/09/26/16/45/kids-8277867_1280.jpg" class="relative rounded-xl shadow-2xl w-full h-auto object-cover" alt="安親班上課情境">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="relative rounded-xl shadow-2xl w-full h-auto object-cover" alt="顧德補習班上課環境">
                 </div>
             </div>
         </div>
