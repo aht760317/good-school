@@ -3,29 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>榮譽榜單 | 斗六顧徳補習班</title>
+    
+    <meta name="description" content="斗六顧徳補習班提供國中數學、自然理化與國文課程，以及國小安親課輔。專業師資，專注於提供高效的家教式輔導，確保學生成績穩定提升。">
+    <meta name="keywords" content="斗六補習班, 斗六安親班, 斗六課輔班, 斗六數學班, 自然, 理化, 家教, 斗六顧徳, 帝都國文, 國中補習班">
+    
+    <title>斗六顧徳補習班 | 數學．自然理化．國文．安親</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Microsoft JhengHei', sans-serif; }
-        .bg-brand { background-color: #0056b3; }
-        .bg-line { background-color: #00C300; }
-        .brand-color { color: #0056b3; }
+        .brand-color { color: #0056b3; } 
+        .bg-brand { background-color: #0056b3; } /* 品牌藍 */
+        .bg-line { background-color: #00C300; } /* LINE 綠色 */
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 50, 100, 0.7), rgba(0, 50, 100, 0.7)), url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .floating-timer {
+            transition: transform 0.3s ease-in-out;
+        }
+        .floating-timer:hover {
+            transform: translateX(-10px);
+        }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-slate-50 text-gray-800 relative">
+
+    <a href="https://douliutimer-gkegcwva.manus.space/" target="_blank" class="floating-timer fixed top-1/3 right-0 z-50 flex items-center bg-red-600 text-white px-3 py-2 text-xs sm:px-4 sm:py-3 sm:text-sm rounded-l-xl shadow-2xl cursor-pointer border-y-2 border-l-2 border-white hover:bg-red-700">
+        <div class="flex flex-col items-center">
+            <i class="fas fa-stopwatch sm:text-2xl text-lg mb-1 animate-pulse"></i>
+            <span class="writing-vertical font-bold tracking-widest text-xs">倒數</span>
+        </div>
+    </a>
 
     <nav class="bg-white shadow-lg fixed w-full z-20 top-0">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-xl md:text-2xl font-extrabold brand-color flex items-center">
-                <a href="index.html"><i class="fas fa-shapes mr-2"></i> 斗六顧徳</a>
+                <i class="fas fa-shapes mr-2"></i> 斗六顧徳
             </div>
             <div class="hidden md:flex space-x-6 text-gray-700 font-bold text-lg items-center">
-                <a href="index.html#features" class="hover:text-blue-600 transition">教學特色</a>
-                <a href="index.html#courses" class="hover:text-blue-600 transition">課程介紹</a>
-                <a href="index.html#care" class="text-orange-600 hover:text-orange-800 transition"><i class="fas fa-child"></i> 安親課輔</a>
+                <a href="#features" class="hover:text-blue-600 transition">教學特色</a>
+                <a href="#courses" class="hover:text-blue-600 transition">課程介紹</a>
+                <a href="#care" class="text-orange-600 hover:text-orange-800 transition"><i class="fas fa-child"></i> 安親課輔</a>
                 <a href="honor.html" class="text-red-600 hover:text-red-800 transition"><i class="fas fa-trophy"></i> 榮譽榜</a>
-                <a href="index.html#location" class="hover:text-blue-600 transition">教室位置</a>
+                <a href="#location" class="hover:text-blue-600 transition">教室位置</a>
             </div>
             <a href="https://lin.ee/XHcZIGc" target="_blank" class="bg-line text-white px-4 py-2 sm:px-5 sm:py-2 rounded-full hover:opacity-90 transition shadow-md text-sm md:text-base flex items-center">
                 <i class="fab fa-line mr-1 md:mr-2 text-lg md:text-xl"></i> 預約試聽
@@ -33,47 +57,240 @@
         </div>
     </nav>
 
-    <div class="pt-24 pb-12 container mx-auto px-6">
-        <div class="text-center mb-16">
-            <i class="fas fa-crown text-yellow-500 text-6xl mb-4"></i>
-            <h1 class="text-5xl font-extrabold text-red-700 mt-2 tracking-wide">金榜題名 🏆 榮譽榜</h1>
-            <p class="text-xl text-gray-600 mt-4">見證實力，超越自我。點擊照片即可查看細節大圖！</p>
+    <header class="hero-bg h-screen flex items-center justify-center text-center text-white px-4 pt-16">
+        <div>
+            <div class="inline-block bg-yellow-500 text-black font-bold px-3 py-1 rounded mb-4 text-sm sm:text-base animate-bounce">
+                🔥 斗六升學第一品牌
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-wider leading-tight">
+                理化自然強項<br>數學國文專家
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 text-blue-100">顧徳數學 ✖ 帝都國文 ✖ 專業課輔</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#courses" class="bg-white text-blue-800 px-6 py-2 md:px-8 md:py-3 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg text-sm md:text-base">
+                    查看課程
+                </a>
+                <a href="tel:055329189" class="bg-blue-600 border border-blue-400 text-white px-6 py-2 md:px-8 md:py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg text-sm md:text-base">
+                    <i class="fas fa-phone-alt mr-2"></i> 電話諮詢
+                </a>
+            </div>
         </div>
-        
-        <div class="grid md:grid-cols-3 gap-8">
-            
-            <div class="bg-white p-4 rounded-lg shadow-lg border border-red-200 hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
-                <a href="113年學期成績優異.png" target="_blank" class="block overflow-hidden rounded">
-                    <img src="113年學期成績優異.png" class="w-full h-auto transform transition duration-300 group-hover:scale-105 border-2 border-red-100">
-                </a>
-                <p class="text-center mt-3 font-extrabold text-xl text-red-700">113年學期成績優異</p>
-            </div>
+    </header>
 
-            <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
-                <a href="https://via.placeholder.com/600x800?text=校排進步榮譽榜" target="_blank" class="block overflow-hidden rounded">
-                    <img src="https://via.placeholder.com/600x800?text=校排進步榮譽榜" class="w-full h-auto transform transition duration-300 group-hover:scale-105 border-2 border-gray-100">
-                </a>
-                <p class="text-center mt-3 font-extrabold text-xl text-blue-700">校排進步榮譽榜</p>
-            </div>
-
-            <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
-                <a href="https://via.placeholder.com/600x800?text=數學滿分榜" target="_blank" class="block overflow-hidden rounded">
-                    <img src="https://via.placeholder.com/600x800?text=數學滿分榜" class="w-full h-auto transform transition duration-300 group-hover:scale-105 border-2 border-gray-100">
-                </a>
-                <p class="text-center mt-3 font-extrabold text-xl text-blue-700">數學滿分榜</p>
-            </div>
-
-            </div>
-        
-        <div class="text-center mt-16">
-            <a href="index.html" class="inline-block bg-blue-600 text-white font-bold px-8 py-3 rounded-full hover:bg-blue-700 transition">
-                <i class="fas fa-home mr-2"></i> 返回首頁
+    <section class="py-12 sm:py-16 bg-red-800 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <i class="fas fa-trophy text-5xl sm:text-6xl text-yellow-400 mb-3 animate-bounce"></i>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-3">狂賀！斗六顧徳 榜單大放異彩</h2>
+            <p class="text-lg sm:text-xl text-red-100 mb-6">見證實力，超越自我。點擊下方按鈕查看最新亮眼榜單。</p>
+            <a href="honor.html" class="inline-block bg-yellow-400 text-red-900 font-extrabold text-lg sm:text-xl px-8 py-3 sm:px-10 sm:py-4 rounded-full shadow-xl hover:bg-yellow-300 hover:scale-105 transition transform">
+                查看完整榮譽榜 <i class="fas fa-arrow-right ml-2"></i>
             </a>
         </div>
-    </div>
+    </section>
 
-    <footer class="bg-gray-900 text-white py-8 text-center">
-        <p>© 2024 斗六顧徳補習班</p>
+    <section id="features" class="py-16 sm:py-20 container mx-auto px-6 bg-white">
+        <div class="text-center mb-12 sm:mb-16">
+            <h2 class="text-3xl font-bold brand-color mb-4">為什麼選擇斗六顧徳？</h2>
+            <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 sm:gap-10 text-center">
+            
+            <div class="p-6 sm:p-8 bg-white shadow-xl rounded-2xl hover:-translate-y-2 transition duration-300 border-b-4 border-blue-600">
+                <div class="text-4xl sm:text-5xl text-blue-600 mb-3"><i class="fas fa-calculator"></i></div>
+                <h3 class="text-xl font-bold mb-3">數學理化強項</h3>
+                <p class="text-gray-600 text-sm">數學、自然、理化全科輔導，提供一對一家教式服務，專攻理科弱點。</p>
+            </div>
+            
+            <div class="p-6 sm:p-8 bg-white shadow-xl rounded-2xl hover:-translate-y-2 transition duration-300 border-b-4 border-red-600">
+                <div class="text-4xl sm:text-5xl text-red-600 mb-3"><i class="fas fa-book-reader"></i></div>
+                <h3 class="text-xl font-bold mb-3">帝都國文授權</h3>
+                <p class="text-gray-600 text-sm">引進知名國文品牌，針對108課綱閱讀素養與會考作文，進行全方位培訓。</p>
+            </div>
+            
+            <div class="p-6 sm:p-8 bg-white shadow-xl rounded-2xl hover:-translate-y-2 transition duration-300 border-b-4 border-orange-500">
+                <div class="text-4xl sm:text-5xl text-orange-500 mb-3"><i class="fas fa-heart"></i></div>
+                <h3 class="text-xl font-bold mb-3">安親課輔照顧</h3>
+                <p class="text-gray-600 text-sm">專車接送、作業指導、品格教育，提供雙薪家庭最安心的課後學習環境。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-16 sm:py-20 bg-blue-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl font-bold brand-color mb-4">全方位課程體系</h2>
+                <p class="text-gray-600">國小扎根 ‧ 國中衝刺 ‧ 國文精進</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="h-48 relative">
+                        <img src="國小數學資優班.png" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900/20"></div>
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2 text-blue-800">國小數學資優班</h3>
+                        <p class="text-sm text-gray-500 mb-3 font-bold">對象：國小 1-6 年級</p>
+                        <ul class="space-y-1 text-gray-700 text-xs sm:text-sm flex-grow">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>建立數感與邏輯基礎</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>應用問題解題技巧</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>銜接國中課程預備</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="h-48 relative">
+                        <img src="國中數學進度班.png" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-yellow-900/20"></div>
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2 text-blue-800">國中數學進度班</h3>
+                        <p class="text-sm text-gray-500 mb-3 font-bold">對象：國中 7-9 年級</p>
+                        <ul class="space-y-1 text-gray-700 text-xs sm:text-sm flex-grow">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>會考 A++ 衝刺培訓</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>段考進度超前部署</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>幾何證明與代數精通</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col border-t-4 border-red-600">
+                    <div class="h-48 relative">
+                        <img src="帝都國文專班.png" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-red-900/20"></div>
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2 text-red-800">帝都國文專班</h3>
+                        <p class="text-sm text-gray-500 mb-3 font-bold">對象：國小 / 國中 / 高中</p>
+                        <ul class="space-y-1 text-gray-700 text-xs sm:text-sm flex-grow">
+                            <li><i class="fas fa-check text-red-500 mr-2"></i>108課綱閱讀素養</li>
+                            <li><i class="fas fa-check text-red-500 mr-2"></i>會考作文滿級分架構</li>
+                            <li><i class="fas fa-check text-red-500 mr-2"></i>系統化教學，精準命中</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-10 sm:mt-12">
+                <a href="https://lin.ee/XHcZIGc" target="_blank" class="inline-block bg-line text-white px-8 py-3 sm:px-10 sm:py-4 rounded-full font-bold hover:opacity-90 transition shadow-xl flex items-center justify-center w-fit mx-auto text-sm sm:text-base">
+                    <i class="fab fa-line mr-2 text-lg sm:text-2xl"></i> 立即預約全科試聽
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="care" class="py-16 sm:py-20 bg-orange-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-orange-600 font-bold tracking-wider text-sm">PARENTS' BEST CHOICE</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-2">國小安親課輔班</h2>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">專為雙薪家庭打造的安心環境。從放學接送、作業指導到生活常規，我們比您更在乎孩子的每一個細節。</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
+                <div class="space-y-6 sm:space-y-8">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-orange-100 p-3 sm:p-4 rounded-lg text-orange-600 text-xl sm:text-2xl"><i class="fas fa-school"></i></div>
+                        <div class="ml-4 sm:ml-6">
+                            <h3 class="text-lg sm:text-xl font-bold mb-1">國小放學專人接送</h3>
+                            <p class="text-gray-600 text-sm">斗六學區專車接送，確保孩子放學路途安全。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-orange-100 p-3 sm:p-4 rounded-lg text-orange-600 text-xl sm:text-2xl"><i class="fas fa-book-open"></i></div>
+                        <div class="ml-4 sm:ml-6">
+                            <h3 class="text-lg sm:text-xl font-bold mb-1">學校作業精準指導</h3>
+                            <p class="text-gray-600 text-sm">每日檢查學校作業，即時訂正錯誤。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-orange-100 p-3 sm:p-4 rounded-lg text-red-600 text-xl sm:text-2xl"><i class="fas fa-chart-line"></i></div>
+                        <div class="ml-4 sm:ml-6">
+                            <h3 class="text-lg sm:text-xl font-bold mb-1 text-red-700">強化學科進度</h3>
+                            <p class="text-gray-600 text-sm">協助預習與複習段考進度，針對弱科加強，確保成績穩定進步。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-orange-100 p-3 sm:p-4 rounded-lg text-orange-600 text-xl sm:text-2xl"><i class="fas fa-utensils"></i></div>
+                        <div class="ml-4 sm:ml-6">
+                            <h3 class="text-lg sm:text-xl font-bold mb-1">生活常規與品格教育</h3>
+                            <p class="text-gray-600 text-sm">不只顧成績，更重視禮貌與生活習慣。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-2 sm:-inset-4 bg-orange-200 rounded-xl transform rotate-2"></div>
+                    <img src="顧德斗六分校.jpg" class="relative rounded-xl shadow-2xl w-full h-auto object-cover" alt="顧德斗六分校上課環境">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-900 text-white py-12 sm:py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-start">
+                
+                <div id="location">
+                    <h3 class="text-2xl sm:text-3xl font-bold mb-2 text-white">斗六顧徳補習班</h3>
+                    <div class="h-1 w-16 bg-blue-500 mb-6 sm:mb-8"></div>
+                    
+                    <div class="space-y-4 sm:space-y-6 text-base sm:text-lg">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mt-1 w-6 sm:w-8"></i>
+                            <div>
+                                <p class="font-bold text-gray-300">教室地址</p>
+                                <p class="text-lg sm:text-xl font-bold">雲林縣斗六市長春路1號</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=雲林縣斗六市長春路1號" target="_blank" class="inline-block mt-2 text-xs sm:text-sm text-blue-400 hover:text-blue-300 border border-blue-400 px-3 py-1 rounded">
+                                    <i class="fas fa-external-link-alt"></i> 在 Google 地圖上查看
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-yellow-500 w-6 sm:w-8"></i>
+                            <div>
+                                <p class="font-bold text-gray-300">諮詢專線</p>
+                                <p class="text-lg sm:text-xl">05-5329189</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <i class="fab fa-facebook text-blue-500 w-6 sm:w-8 animate-pulse text-xl sm:text-2xl"></i>
+                            <div>
+                                <a href="https://www.facebook.com/?locale=zh_TW" target="_blank" class="font-bold text-base sm:text-lg text-blue-400 hover:text-blue-200 transition">追蹤我們的 Facebook 粉絲專頁</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white text-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl">
+                    <h4 class="text-xl sm:text-2xl font-bold mb-4 text-blue-900">預約免費試聽 / 安親諮詢</h4>
+                    <p class="text-gray-600 mb-4 sm:mb-6 text-sm">歡迎加入我們的官方 LINE 帳號，或使用 Google 表單填寫。</p>
+                    
+                    <a href="https://lin.ee/XHcZIGc" target="_blank" class="block w-full text-center bg-line text-white font-bold py-3 sm:py-4 rounded-lg hover:opacity-90 transition transform active:scale-95 shadow-lg mb-3 sm:mb-4 flex items-center justify-center text-sm sm:text-base">
+                        <i class="fab fa-line mr-2 text-xl sm:text-2xl"></i> 加入官方 LINE 預約
+                    </a>
+                    
+                    <p class="text-center text-gray-500 mb-3 sm:mb-4 font-bold text-sm">—— 或者 ——</p>
+
+                    <a href="https://docs.google.com/forms/d/1oePE-pP9v5peUJhkq0Kxe_VJiJSwW5jRz79SX3gMF5o/viewform" target="_blank" class="block w-full text-center bg-brand text-white font-bold py-3 sm:py-4 rounded-lg hover:opacity-90 transition transform active:scale-95 shadow-lg flex items-center justify-center text-sm sm:text-base">
+                        <i class="fas fa-pen-alt mr-2 text-lg sm:text-xl"></i> 填寫 Google 表單預約
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-800 text-gray-500 text-xs sm:text-sm">
+                © 2024 斗六顧徳補習班. All Rights Reserved.
+            </div>
+        </div>
     </footer>
 
 </body>
