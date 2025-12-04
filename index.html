@@ -64,12 +64,12 @@
             <p class="text-gray-600 mb-6 text-base">利用寒假衝刺數理，超前部署下一學期！限時優惠，名額一滿即止。</p>
             
             <div class="space-y-3">
-                <a href="https://lin.ee/XHcZIGc" target="_blank" onclick="closePopup()" class="block bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition shadow-md">
+                <a href="#wintercamp" onclick="closePopup()" class="block bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition shadow-md">
                     <i class="fab fa-line mr-2"></i> 立即搶佔最後名額
                 </a>
                 
-                <button onclick="closePopup()" class="block w-full text-center text-gray-500 bg-gray-100 py-3 rounded-lg hover:bg-gray-200 transition">
-                    我只是看看 (回到首頁)
+                <button onclick="closePopup()" class="block w-full text-center bg-brand text-white py-3 rounded-lg hover:opacity-90 transition">
+                    我要回到斗六顧德首頁
                 </button>
             </div>
         </div>
@@ -384,9 +384,10 @@
             if (overlay) {
                 content.style.transform = 'scale(0.8)';
                 overlay.classList.remove('active');
+                // 使用 setTimeout 確保動畫結束才隱藏
                 setTimeout(() => {
                     overlay.style.display = 'none';
-                }, 300); // 延遲300ms等待動畫完成
+                }, 300); 
             }
         }
 
