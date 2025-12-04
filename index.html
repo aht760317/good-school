@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="斗六顧徳補習班提供國中數學、自然理化與國文課程，以及國小安親課輔。專業師資，專注於提供高效的家教式輔導，確保學生成績穩定提升。">
-    <meta name="keywords" content="斗六補習班, 斗六安親班, 斗六課輔班, 斗六數學班, 自然, 理化, 家教, 斗六顧徳, 帝都國文, 國中補習班">
+    <meta name="description" content="斗六顧徳補習班提供國中數學、自然理化與國文課程，以及國小安親課輔。專業師資，專注升學，現正開放2026冬令營限額招生中！">
+    <meta name="keywords" content="斗六補習班, 斗六安親班, 斗六冬令營, 斗六數學班, 自然, 理化, 家教, 斗六顧徳, 帝都國文, 2026冬令營">
     
-    <title>斗六顧徳補習班 | 數學．自然理化．國文．安親</title>
+    <title>斗六顧徳補習班 | 數學．國文．冬令營．安親</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -28,10 +28,46 @@
         .floating-timer:hover {
             transform: translateX(-10px);
         }
+
+        /* 彈窗背景層 */
+        #popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 100; /* 確保它在所有內容之上 */
+            display: none; /* 預設隱藏 */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 彈窗本體動畫 */
+        #popup-content {
+            transform: scale(0.9);
+            transition: transform 0.3s ease-out;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-gray-800 relative">
 
+    <div id="popup-overlay" onclick="closePopup()">
+        <div id="popup-content" class="bg-white p-8 rounded-xl shadow-2xl text-center max-w-sm mx-4" onclick="event.stopPropagation()">
+            <i class="fas fa-bullhorn text-5xl text-red-600 mb-4 animate-bounce"></i>
+            <h3 class="text-3xl font-extrabold text-red-700 mb-2">2026 顧德冬令營</h3>
+            <p class="text-xl font-bold text-gray-800 mb-6">熱烈招生中！</p>
+            <p class="text-gray-600 mb-6">利用寒假衝刺數學、自然理化，超前部署下一學期！名額有限，立即洽詢。</p>
+            
+            <a href="https://lin.ee/XHcZIGc" target="_blank" class="block bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition mb-3">
+                <i class="fab fa-line mr-2"></i> 立即 LINE 預約
+            </a>
+            
+            <button onclick="closePopup()" class="text-sm text-gray-500 hover:text-gray-700 transition">
+                稍後再看 (點擊關閉)
+            </button>
+        </div>
+    </div>
     <a href="https://douliutimer-gkegcwva.manus.space/" target="_blank" class="floating-timer fixed top-1/3 right-0 z-50 flex items-center bg-red-600 text-white px-3 py-2 text-xs sm:px-4 sm:py-3 sm:text-sm rounded-l-xl shadow-2xl cursor-pointer border-y-2 border-l-2 border-white hover:bg-red-700">
         <div class="flex flex-col items-center">
             <i class="fas fa-stopwatch sm:text-2xl text-lg mb-1 animate-pulse"></i>
@@ -45,6 +81,8 @@
                 <i class="fas fa-shapes mr-2"></i> 斗六顧徳
             </div>
             <div class="hidden md:flex space-x-6 text-gray-700 font-bold text-lg items-center">
+                <a href="#wintercamp" class="text-red-700 bg-yellow-400 px-3 py-1 rounded font-bold hover:bg-yellow-500 transition">2026 冬令營</a>
+                
                 <a href="#features" class="hover:text-blue-600 transition">教學特色</a>
                 <a href="#courses" class="hover:text-blue-600 transition">課程介紹</a>
                 <a href="#care" class="text-orange-600 hover:text-orange-800 transition"><i class="fas fa-child"></i> 安親課輔</a>
@@ -63,7 +101,7 @@
                 🔥 斗六升學第一品牌
             </div>
             <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-wider leading-tight">
-                數學國文強項<br>營隊專門家
+                理化自然強項<br>國文素養專家
             </h1>
             <p class="text-xl md:text-2xl mb-10 text-blue-100">顧徳數學 ✖ 帝都國文 ✖ 專業課輔</p>
             <div class="flex justify-center space-x-4">
@@ -88,6 +126,30 @@
             </a>
         </div>
     </section>
+
+    <section id="wintercamp" class="py-16 bg-yellow-100 border-b-4 border-yellow-400">
+        <div class="container mx-auto px-6 text-center">
+            <span class="bg-red-600 text-white font-bold px-3 py-1 rounded text-sm animate-pulse">限額招生中！</span>
+            <h2 class="text-3xl font-extrabold text-gray-800 mt-3 mb-4">2026 顧德冬令營 - 理化數理加強班</h2>
+            <p class="text-xl text-gray-700 mb-6">利用寒假超前部署，針對國三總複習及國小重點科目進行強化。</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                <div class="text-2xl font-bold text-red-700 flex items-center">
+                    <i class="fas fa-calendar-alt mr-3"></i> 報名截止：2026/01/15
+                </div>
+                <div class="text-2xl font-bold text-blue-700 flex items-center">
+                    <i class="fas fa-user-friends mr-3"></i> 課程名額：僅剩 12 席
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <a href="https://lin.ee/XHcZIGc" target="_blank" class="inline-block bg-red-600 text-white font-extrabold text-xl px-12 py-5 rounded-lg shadow-2xl hover:bg-red-700 hover:scale-105 transition transform">
+                    <i class="fab fa-line mr-2"></i> 立即 LINE 洽詢名額！
+                </a>
+            </div>
+        </div>
+    </section>
+
 
     <section id="features" class="py-16 sm:py-20 container mx-auto px-6 bg-white">
         <div class="text-center mb-12 sm:mb-16">
@@ -265,7 +327,7 @@
                         <div class="flex items-center">
                             <i class="fab fa-facebook text-blue-500 w-6 sm:w-8 animate-pulse text-xl sm:text-2xl"></i>
                             <div>
-                                <a href="https://www.facebook.com/douliougood/?locale=zh_TW" target="_blank" class="font-bold text-base sm:text-lg text-blue-400 hover:text-blue-200 transition">追蹤我們的 Facebook 粉絲專頁</a>
+                                <a href="https://www.facebook.com/?locale=zh_TW" target="_blank" class="font-bold text-base sm:text-lg text-blue-400 hover:text-blue-200 transition">追蹤我們的 Facebook 粉絲專頁</a>
                             </div>
                         </div>
                     </div>
@@ -281,7 +343,7 @@
                     
                     <p class="text-center text-gray-500 mb-3 sm:mb-4 font-bold text-sm">—— 或者 ——</p>
 
-                    <a href="https://docs.google.com/forms/d/1oePE-pP9v5peUJhkq0Kxe_VJiJSwW5jRz79SX3gMF5o/viewform" target="_blank" class="block w-full text-center bg-brand text-white font-bold py-3 sm:py-4 rounded-lg hover:opacity-90 transition transform active:scale-95 shadow-lg flex items-center justify-center text-sm sm:text-base">
+                    <a href="https://docs.google.com/forms/d/1oePE-pP9v5peUJhkq0Kxe_VJiJSwW5jRz79SX3gMF5o/viewform" target="_blank" class="block w-full text-center bg-brand text-white font-bold py-3 sm:py-4 rounded-lg hover:opacity-90 transition transform active:scale-95 shadow-lg flex items-center justify-center">
                         <i class="fas fa-pen-alt mr-2 text-lg sm:text-xl"></i> 填寫 Google 表單預約
                     </a>
                 </div>
@@ -293,7 +355,33 @@
         </div>
     </footer>
 
+    <script>
+        function showPopup() {
+            const overlay = document.getElementById('popup-overlay');
+            const content = document.getElementById('popup-content');
+            if (overlay) {
+                overlay.style.display = 'flex';
+                // 增加延遲，讓彈窗動畫更流暢
+                setTimeout(() => {
+                    content.style.transform = 'scale(1)';
+                }, 10);
+            }
+        }
+
+        function closePopup() {
+            const overlay = document.getElementById('popup-overlay');
+            const content = document.getElementById('popup-content');
+            if (overlay) {
+                content.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 300); // 延遲300ms等待動畫完成
+            }
+        }
+
+        // 頁面加載完成後自動彈出
+        window.onload = showPopup;
+    </script>
+
 </body>
 </html>
-
-
