@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>課程時間表 - 顧德補習班</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            background: var(--card-bg);
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        .btn-home {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .btn-home:hover {
+            background-color: #2980b9;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            background-color: #e0e6ed;
+            border: none;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--primary-color);
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            background-color: var(--card-bg);
+            color: var(--accent-color);
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+        }
+
+        .schedule-section {
+            display: none;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 0 12px 12px 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow-x: auto;
+        }
+
+        .schedule-section.active {
+            display: block;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            min-width: 700px;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px 8px;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .time-col {
+            background-color: #f8fafc;
+            font-weight: 500;
+            white-space: nowrap;
+            width: 140px;
+        }
+
+        td:hover {
+            background-color: #f8fafc;
+        }
+
+        .course-tag {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            margin: 2px;
+        }
+
+        .math { background-color: #ebf8ff; color: #3182ce; }
+        .chinese { background-color: #fffaf0; color: #dd6b20; }
+        .english { background-color: #f0fff4; color: #38a169; }
+        .creative { background-color: #f5f3ff; color: #805ad5; }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>📚 顧德補習班 - 課程時間表</h1>
+        <!-- 請將 href 替換為您的補習班官方網址 -->
+        <a href="https://www.didouchinese.com.tw/" class="target-link btn-home" target="_blank">返回補習班官網</a>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'elementary')">國小部課表</button>
+        <button class="tab-btn" onclick="switchTab(event, 'junior')">國中部課表</button>
+    </div>
+
+    <!-- 國小部課表 -->
+    <div id="elementary" class="schedule-section active">
+        <h2>小學部課程規劃</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>節次 / 時間</th>
+                    <th>星期一</th>
+                    <th>星期二</th>
+                    <th>星期三</th>
+                    <th>星期四</th>
+                    <th>星期五</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">14:00 - 15:00</td>
+                    <td><span class="course-tag math">小一數學</span></td>
+                    <td><span class="course-tag math">小二數學</span></td>
+                    <td>13:30-14:30<br><span class="course-tag math">小三數學</span></td>
+                    <td>13:30-14:30</td>
+                    <td>13:30-14:30<br><span class="course-tag math">小三數學</span></td>
+                </tr>
+                <tr>
+                    <td class="time-col">15:00 - 16:30</td>
+                    <td></td>
+                    <td></td>
+                    <td>13:30-14:30<br><span class="course-tag math">小四數學</span></td>
+                    <td></td>
+                    <td>13:30-14:30<br><span class="course-tag math">小四數學</span></td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:30 - 18:00</td>
+                    <td><span class="course-tag math">小六數學</span></td>
+                    <td><span class="course-tag math">小五數學</span></td>
+                    <td>16:00-18:00<br><span class="course-tag math">小五數學</span></td>
+                    <td><span class="course-tag math">小六數學</span></td>
+                    <td><span class="course-tag math">小五數學</span></td>
+                </tr>
+                <tr>
+                    <td class="time-col">19:00 - 20:30</td>
+                    <td></td>
+                    <td></td>
+                    <td>18:00-20:00<br><span class="course-tag math">小六數學</span><br><span class="course-tag creative">創意作文班</span></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 國中部課表 -->
+    <div id="junior" class="schedule-section">
+        <h2>國中部課程規劃</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>節次 / 時間</th>
+                    <th>星期一</th>
+                    <th>星期二</th>
+                    <th>星期三</th>
+                    <th>星期四</th>
+                    <th>星期五</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">18:30 - 20:30<br>(2hr)</td>
+                    <td>
+                        <span class="course-tag chinese">國一國文</span><br>
+                        <span class="course-tag chinese">國三國文</span>
+                    </td>
+                    <td></td>
+                    <td><span class="course-tag english">國一英文課</span></td>
+                    <td></td>
+                    <td><span class="course-tag chinese">國二國文</span></td>
+                </tr>
+                <tr>
+                    <td class="time-col">18:30 - 21:30<br>(3hr)</td>
+                    <td><span class="course-tag math">國二數學</span></td>
+                    <td><span class="course-tag math">國一數學</span></td>
+                    <td></td>
+                    <td><span class="course-tag math">國一數學</span></td>
+                    <td><span class="course-tag math">國三數學</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    function switchTab(evt, tabName) {
+        const sections = document.querySelectorAll('.schedule-section');
+        sections.forEach(sec => sec.classList.remove('active'));
+
+        const buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        document.getElementById(tabName).classList.add('active');
+        evt.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
