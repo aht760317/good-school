@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026年 斗六顧德補習班 & 帝都文創蔡恆國文 - 課程時間表</title>
+    <title>2026年 斗六顧德補習班 & 帝都文創 蔡恆國文 - 課程時間表</title>
     <style>
         :root {
             --primary: #1e3a8a;
@@ -56,6 +56,14 @@
             margin-bottom: 20px;
         }
 
+        .header-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
         .header-btn {
             display: inline-block;
             background-color: var(--accent);
@@ -71,6 +79,15 @@
         .header-btn:hover {
             background-color: #d97706;
             transform: translateY(-2px);
+        }
+
+        .header-btn.secondary-link {
+            background-color: #ffffff;
+            color: var(--primary);
+        }
+
+        .header-btn.secondary-link:hover {
+            background-color: #f1f5f9;
         }
 
         .container {
@@ -122,12 +139,20 @@
             margin-bottom: 50px;
         }
 
+        .nav-bar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
         .tabs {
             display: flex;
             gap: 15px;
-            margin-bottom: 25px;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 15px;
         }
 
         .tab-btn {
@@ -146,6 +171,41 @@
             background: var(--primary);
             color: white;
             box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-phone {
+            background-color: #0ea5e9;
+            color: white;
+        }
+
+        .btn-phone:hover {
+            background-color: #0284c7;
+        }
+
+        .btn-line {
+            background-color: #22c55e;
+            color: white;
+        }
+
+        .btn-line:hover {
+            background-color: #16a34a;
         }
 
         .schedule-section {
@@ -240,8 +300,10 @@
 
         @media (max-width: 768px) {
             header h1 { font-size: 1.8rem; }
-            .tabs { flex-direction: column; }
-            .tab-btn { width: 100%; text-align: center; }
+            .nav-bar-container { flex-direction: column; align-items: stretch; }
+            .tabs { justify-content: center; }
+            .action-buttons { justify-content: center; }
+            .tab-btn { flex: 1; text-align: center; padding: 12px 10px; }
         }
     </style>
 </head>
@@ -250,7 +312,10 @@
     <header>
         <h1>2026 斗六顧德補習班 課程時間表</h1>
         <p>📍 雲林縣斗六市長春路1號 ｜ 專業優質教育，成就孩子未來</p>
-        <a href="https://www.didouchinese.com.tw/" class="header-btn" target="_blank">🌟 造訪帝都文創蔡恆國文官網</a>
+        <div class="header-btns">
+            <a href="https://aht760317.github.io/good-school/" class="header-btn secondary-link" target="_blank">🏫 斗六顧德官方網站</a>
+            <a href="https://www.didouchinese.com.tw/" class="header-btn" target="_blank">🌟 帝都文創 蔡恆國文網站</a>
+        </div>
     </header>
 
     <div class="container">
@@ -272,9 +337,15 @@
 
         <!-- 課表主體區塊 -->
         <div class="schedule-container">
-            <div class="tabs">
-                <button class="tab-btn active" onclick="switchTab(event, 'elementary')">📚 國小部課表</button>
-                <button class="tab-btn" onclick="switchTab(event, 'junior')">📖 國中部課表</button>
+            <div class="nav-bar-container">
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="switchTab(event, 'elementary')">📚 國小部課表</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'junior')">📖 國中部課表</button>
+                </div>
+                <div class="action-buttons">
+                    <a href="tel:055329189" class="action-btn btn-phone">📞 撥打電話</a>
+                    <a href="https://lin.ee/54PA7Mp" class="action-btn btn-line" target="_blank">💬 加入Line</a>
+                </div>
             </div>
 
             <!-- 國小部課表 -->
@@ -336,7 +407,7 @@
 
             <!-- 國中部課表 -->
             <div id="junior" class="schedule-section">
-                <h2 class="section-title">國中部課程規劃（含帝都文創蔡恆國文）</h2>
+                <h2 class="section-title">國中部課程規劃 帝都文創 蔡恆國文</h2>
                 <div class="table-responsive">
                     <table>
                         <thead>
@@ -364,7 +435,7 @@
                             <tr>
                                 <td class="time-col">18:30 - 21:30<br><small>(3hr)</small></td>
                                 <td><span class="badge badge-math">國二數學</span></td>
-                                <td><span class="badge badge-math">國一數學</span></td>
+                                <td><span class="badge badge-math">小一數學</span></td>
                                 <td>-</td>
                                 <td><span class="badge badge-math">國一數學</span></td>
                                 <td><span class="badge badge-math">國三數學</span></td>
@@ -377,8 +448,8 @@
     </div>
 
     <footer>
-        <p><strong>斗六顧德補習班</strong> ｜ 地址：雲林縣斗六市長春路1號</p>
-        <p>官方網站合作連結：<a href="https://www.didouchinese.com.tw/" target="_blank">帝都文創蔡恆國文官網</a></p>
+        <p><strong>斗六顧德補習班</strong> ｜ 地址：雲林縣斗六市長春路1號 ｜ 電話：05-5329189</p>
+        <p>官方網站：<a href="https://aht760317.github.io/good-school/" target="_blank">斗六顧德官方網站</a> ｜ <a href="https://www.didouchinese.com.tw/" target="_blank">帝都文創 蔡恆國文網站</a></p>
         <p>&copy; 2026 斗六顧德補習班 All Rights Reserved.</p>
     </footer>
 
